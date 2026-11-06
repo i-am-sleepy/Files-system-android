@@ -19,15 +19,9 @@ It tries these, in order, and uses the first that works:
 
 If none exist, an explanatory screen is shown.
 
-## About "Small window" (vivo, Samsung and others)
 
-Phone makers decide per app whether their "Small window" / pop-up option is
-offered in the Recents menu. The window you see is the phone's own file manager
-(it opens in its own task), not this shortcut, so nothing in this app's
-manifest can change that option. This app declares `resizeableActivity="true"`
-like the app it re-implements, which is all a shortcut can do.
 
-## Building (no computer needed)
+## Building 
 
 The APK is built by GitHub Actions (`.github/workflows/build.yml`). After each
 build, open the repository's **Releases** page and download `OpenFiles.apk`.
