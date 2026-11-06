@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'app.openfiles'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'app.openfiles'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // A fixed signing key, so every new build can be installed over the previous one.
+    // This is a personal/hobby key. If you ever publish the app, make your own.
+    signingConfigs {
+        openfiles {
+            storeFile rootProject.file('openfiles.jks')
+            storeType 'jks'
+            storePassword 'openfiles'
+            keyAlias 'openfiles'
+            keyPassword 'openfiles'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.openfiles
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- Lets the app "see" the phone's built-in file manager (Android 11+). -->
+    <queries>
+        <package android:name="com.google.android.documentsui" />
+        <package android:name="com.android.documentsui" />
+        <intent>
+            <action android:name="android.provider.action.BROWSE" />
+        </intent>
+        <intent>
+            <action android:name="android.provider.action.BROWSE_DOCUMENT_ROOT" />
+        </intent>
+        <provider android:authorities="com.android.externalstorage.documents" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="false"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+        <!-- Icon 1: opens the file manager normally (same as the original app). -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icon 2: opens the file manager in a small window. -->
+        <activity
+            android:name=".SmallWindowActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_small"
+            android:label="@string/app_name_small"
+            android:noHistory="true"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Shown only when the phone has no built-in file manager. -->
+        <activity
+            android:name=".ErrorActivity"
+            android:exported="false"
+            android:resizeableActivity="true"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar" />
+    </application>
+</manifest>

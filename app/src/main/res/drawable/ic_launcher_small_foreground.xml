@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- A folder... -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,38 L30,72 Q30,76 34,76 L74,76 Q78,76 78,72 L78,46 Q78,42 74,42 L52,42 L47,36 L34,36 Q30,36 30,40 Z" />
+    <!-- ...with a little window in the corner -->
+    <path
+        android:fillColor="#E8710A"
+        android:pathData="M52,52 L72,52 L72,69 L52,69 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,58 L69,58 L69,66 L55,66 Z" />
+</vector>
