@@ -16,6 +16,7 @@ jobs:
       - name: Unpack source.zip (only if you uploaded one)
         run: |
           if [ -f source.zip ]; then
+            rm -rf app
             unzip -o -q source.zip
             rm -f source.zip
             git config user.name "github-actions[bot]"
