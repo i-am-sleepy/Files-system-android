@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Files</string>
-    <string name="app_name_small">Files (small)</string>
 
     <string name="error_title">Not supported on this phone</string>
     <string name="error_message">The built-in file manager could not be found on this phone, so this shortcut has nothing to open.</string>
-    <string name="small_window_unavailable">Could not request a small window on this phone. The file manager may open full screen.</string>
 
-    <color name="icon_bg">#1E6FD9</color>
-    <color name="icon_bg_small">#E8710A</color>
+    <!-- Icon background: red -->
+    <color name="icon_bg">#D32F2F</color>
 </resources>

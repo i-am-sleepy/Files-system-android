@@ -26,26 +26,10 @@
         android:usesCleartextTraffic="false"
         android:theme="@android:style/Theme.Translucent.NoTitleBar">
 
-        <!-- Icon 1: opens the file manager normally (same as the original app). -->
+        <!-- The only icon: opens the phone's built-in file manager. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:noHistory="true"
-            android:resizeableActivity="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Icon 2: opens the file manager in a small window. -->
-        <activity
-            android:name=".SmallWindowActivity"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher_small"
-            android:label="@string/app_name_small"
             android:noHistory="true"
             android:resizeableActivity="true">
             <intent-filter>
